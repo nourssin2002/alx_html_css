@@ -1,0 +1,53 @@
+/* body كـ container ديال الصفحة كاملة */
+body {
+  display: flex;
+  flex-direction: column; /* header - main - footer مكدودين فوق بعض */
+  height: 100vh; /* تياخذ طول كامل ديال الشاشة */
+  margin: 0;
+}
+
+/* main كـ container ديال article و aside */
+main {
+  display: flex;
+  flex-direction: row; /* article و aside بجنب بعض */
+  flex: auto; /* باش main يتكيّف آلياً */
+}
+
+/* article ياخذ 2/3 من العرض */
+article {
+  flex: 2;
+  overflow-y: auto; /* scroll داخلي */
+  padding: 10px;
+}
+
+/* aside ياخذ 1/3 من العرض */
+aside {
+  flex: 1;
+  overflow-y: auto; /* scroll داخلي */
+  padding: 10px;
+}
+
+/* شكل بسيط للـ header و footer */
+header, footer {
+  background-color: #f0f0f0;
+  padding: 15px;
+  text-align: center;
+}
+<body>
+  <header>
+    Content of the header
+  </header>
+
+  <main>
+    <article>
+      Content of the article
+    </article>
+    <aside>
+      Content of the aside
+    </aside>
+  </main>
+
+  <footer>
+    Content of the footer
+  </footer>
+</body>
